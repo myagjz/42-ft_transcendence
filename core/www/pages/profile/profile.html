@@ -1,0 +1,86 @@
+<main class="d-flex flex-fill py-5">
+    <div class="container">
+        <h2 class="text-center fw-light text-light mt-3">Profil</h2>
+        <div class="row justify-content-center mt-5">
+            <div class="col-xl-6 mt-4">
+                <div class="text-dark shadow bodyCard">
+                    <div class="card-body position-relative text-center p-4">
+                        <img id="profile-image" src=""
+                            class="img-fluid position-absolute top-0 start-50 translate-middle rounded-circle shadow"
+                            style="height: 7rem; width: 7rem; object-fit: cover;">
+                        <div class="mt-5">
+                            <h5 id="profile-text-name" class="text-light mb-1">Adınız</h5>
+                            <h6 id="profile-text-username" class="text-light fw-light mb-2">@kullaniciadi</h6>
+                            <h6 id="profile-text-email" class="text-light fw-light mb-2">ornek@example.com</h6>
+                        </div>
+                    </div>
+                </div>
+                <div id="buttonGroup" class="d-flex flex-row card color mt-3 justify-content-between p-2 w-100 gap-2">
+                    <button id="addFriendButton" class="btn color flex-grow-1">
+                        <i class="fa-solid fa-user-group ms-1"></i>
+                        Arkadaş Ekle
+                    </button>
+                    <button id="sendMessageButton" class="btn color flex-grow-1">
+                        <i class="fa-solid fa-message ms-1"></i>
+                        Mesaj Gönder
+                    </button>
+                    <button id="blockUserButton" class="btn color flex-grow-1">
+                        <i class="fa-solid fa-ban ms-1"></i>
+                        Engelle
+                    </button>
+                </div>
+                               
+                <!-- Statistics Card -->
+                <div class="bodyCard card color border-transparent text-dark shadow card mt-3">
+                    <div class="card-body text-light">
+                        <h5 class="fw-light mb-3 text-center">Oyun İstatistikleri</h5>
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <h6 class="fw-light">Galibiyet</h6>
+                                <span id="wins-count"></span>
+                            </div>
+                            <div class="col-4">
+                                <h6 class="fw-light">Mağlubiyet</h6>
+                                <span id="losses-count"></span>
+                            </div>
+                            <div class="col-4">
+                                <h6 class="fw-light">Kazanma Olasılığı</h6>
+                                <span id="win-rate"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Match History Card -->
+                <div class="bodyCard card color border-transparent text-dark shadow card mt-3">
+                    <div class="card-body">
+                        <h5 class="fw-light mb-3 text-center text-light">Maç Geçmişi</h5>
+                        <div id="match-history" class="list-group list-group-flush">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Friend Modal -->
+    <div class="modal" id="friendModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content color bodyCard">
+                <div class="modal-header">
+                    <h5 class="modal-title text-dark">Onay Kutusu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-dark">
+                    <p>Arkadaşlıktan çıkarmak istediğinize emin misiniz?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hayır</button>
+                    <button id="friendRemoveButton" type="button" class="btn btn-primary">Evet</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

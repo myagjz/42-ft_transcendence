@@ -1,0 +1,18 @@
+<main class="d-flex flex-fill justify-content-center align-items-center">
+  <div class="card shadow-sm p-4" style="width: 30rem;">
+    <div class="card-body d-flex flex-column text-center">
+      <h5 class="card-title mb-4">2FA Doğrulaması</h5>
+      <div class="form-group">
+        <div class="d-flex flex-column">
+          <i class="fa-solid fa-key fa-2x mb-3 text-danger"></i>
+          <label for="password">2FA Kodunuzu Giriniz</label>
+        </div>
+        <input type="password" class="form-control mt-2" id="password" placeholder="2FA Kodunuzu Giriniz" required>
+        <div class="invalid-feedback">
+          2FA Doğrulaması Başarısız!
+        </div>
+      </div>
+      <button id="tfaButton" class="btn text-danger mt-3 tfa-button">Onayla</button>
+    </div>
+  </div>
+</main>

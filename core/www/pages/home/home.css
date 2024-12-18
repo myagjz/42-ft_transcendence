@@ -1,0 +1,56 @@
+main {
+    background-color: black;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), 
+                      url('https://4kwallpapers.com/images/walls/thumbs_3t/11408.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.subcard
+{
+    background:rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+    transition: 0.5s ease;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+.buttonHome {
+    color: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to left top, 
+    transparent,
+    rgba(255, 255, 255, 0.8));
+    overflow: hidden;
+    transition: 0.5s ease;
+    border-radius: 3px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.buttonHome:hover
+{
+    color: black;
+    transform: translateY(-5px);
+}
+
+
+.buttonHome::before {
+    content: '';
+    filter: blur(2px);
+    position: absolute;
+    background: linear-gradient(to left top, rgba(255, 255, 255, 1), transparent);
+    top: 0;
+    left: 0px;
+    height: 100%;
+    width: 0%;
+    z-index: -1;
+    transition: 1s;
+    transform: skewX(-30deg);
+}
+
+.buttonHome:hover::before {
+    width: 130%;
+}

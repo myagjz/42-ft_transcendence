@@ -1,0 +1,27 @@
+main {
+    background-color: black;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                      url('https://4kwallpapers.com/images/walls/thumbs_3t/5095.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+    transition: 0.5s ease;
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 12px;
+}
+
+.card-body
+{
+    color: white;
+}
+
+.sender
+{
+    color:aliceblue;
+}

@@ -1,0 +1,48 @@
+<main class="container mt-5">
+    <div class="row justify-content-center mt-4">
+        <div class="col-12 col-md-6 text-center">
+            <div id="score-board" class="score-board">
+                <h2 class="d-none">Skor</h2>
+                <p class="d-none"><span id="player1-label">Oyuncu 1</span>: <span id="player1-score">0</span></p>
+                <p class="d-none"><span id="player2-label">Oyuncu 2</span>: <span id="player2-score">0</span></p>
+                <p class="d-none"><span id="winner-label"></span></p>
+            </div>
+            <div id="counter-setup" class="d-none"></div>
+                <h3 id="counter-display"></h3>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row justify-content-center">
+        <div class="col">
+            <div class="game-container d-flex justify-content-center align-items-center"></div>
+        </div>
+    </div>
+
+    <!-- Game Settings Modal -->
+    <div id="settings-modal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Oyun Ayarları</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="table-color" class="text-dark">Masa Rengi:</label>
+                    <input type="color" id="table-color" name="table-color" value="#00ff00" class="form-control"><br>
+
+                    <label for="paddle-color" class="text-dark">Paddle Rengi:</label>
+                    <input type="color" id="paddle-color" name="paddle-color" value="#ff0000" class="form-control"><br>
+
+                    <label for="paddle-length" class="text-dark">Paddle Uzunluğu:</label>
+                    <input type="range" id="paddle-length" name="paddle-length" min="0.5" max="1" value="4" step="0.1" class="form-range">
+                    <p id="paddle-length-display" class="text-black">Uzunluk: 1</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                    <button id="save-settings" class="btn btn-primary" data-bs-dismiss="modal">Kaydet</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

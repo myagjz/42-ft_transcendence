@@ -1,0 +1,151 @@
+#sidebar
+{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    color: white;
+}
+
+.nav .nav-item #logout
+{
+    background: rgba(255, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 10px 10px 50px 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    color: white;
+    transition: 0.3s;
+}
+
+.nav .nav-item #logout:hover
+{
+    transform:translateX(10px);
+    background-color: rgba(197, 0, 0, 0.689);
+
+}
+
+.nav .nav-item .sideButton
+{
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 10px 10px 50px 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    color: white;
+    transition: 0.3s;
+}
+
+#notification, .settingsButton, .offcanvasButton
+{
+    background: rgba(156, 172, 189, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    overflow: hidden;
+}
+
+#notification::before , .settingsButton::before, .offcanvasButton::before
+{
+    content: '';
+    position: absolute;
+    background: linear-gradient(to left top, 
+    rgba(255, 255, 255, 0.643),
+    transparent);
+    top: 0;
+    left: -50px;
+    height: 100%;
+    width: 0%;
+    z-index: -1;
+    transition: 0.3s;
+    transform: skewX(-30deg);
+}
+
+#notification:hover::before, .settingsButton:hover::before, .offcanvasButton:hover::before
+{
+    width: 250%;
+}
+
+.nav .nav-item .sideButton::before
+{
+    content: '';
+    position: absolute;
+    background: linear-gradient(to left top, 
+    rgb(255, 255, 255),
+    transparent);
+    top: 0;
+    left: -50px;
+    height: 100%;
+    width: 0%;
+    z-index: -1;
+    transition: 0.3s;
+    transform: skewX(-30deg);
+
+}
+
+.nav .nav-item .sideButton:hover::before
+{
+    width: 140%;
+}
+
+
+.nav .nav-item .sideButton:hover
+{
+    transform:translateX(10px);
+}
+
+#settings .modal-content {
+    background: rgba(255, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    color: white;
+    transition: 0.3s;
+}
+
+#personalizeButton
+{
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    color: white;
+    transition: 0.3s;
+}
+
+#personalizeButton:hover
+{
+    transform: scale(1.05);
+}
+#personalizeButton::before
+{
+    content: '';
+    position: absolute;
+    background: linear-gradient(to left top, 
+    rgba(255, 255, 255, 0.3),
+    transparent);
+    top: 0;
+    left: -50px;
+    height: 100%;
+    width: 0%;
+    z-index: -1;
+    transition: 0.3s;
+    transform: skewX(-30deg);
+}
+
+#personalizeButton:hover::before
+{
+    width: 200%;
+}
+
+#gameOverModal .modal-content {
+    background: linear-gradient(to left top, 
+    rgba(255, 255, 255, 0.7),
+    transparent);
+    overflow: hidden;
+    transition: 1s;
+    color: white;
+    backdrop-filter: blur(15px);
+}

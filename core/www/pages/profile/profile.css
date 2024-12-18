@@ -1,0 +1,150 @@
+main {
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/3926.jpg');
+}
+
+#profile-image
+{
+    background-color: rgb(62, 60, 68);
+}
+
+.bodyCard {
+    background: linear-gradient(to left top, 
+    rgba(255, 255, 255, 0.3),
+    rgba(28, 47, 57, 0.6));
+    transition: 1s ease;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 12px;
+    border: 2px solid transparent;
+}
+
+.bodyCard:hover {
+    background: linear-gradient(to left top, 
+    rgba(255, 255, 255, 0.3),
+    rgba(28, 47, 57, 0.6));
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(0px);
+    border-radius: 8px;
+    transform: perspective(15px) rotateY(0.1deg) rotateX(0.1deg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.matchCard {
+    background: transparent;
+    transition: 0.5s ease;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 2px solid transparent;
+    overflow: hidden;
+    position: relative;
+}
+
+.matchCard:hover {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(0px);
+    border-radius: 8px;
+    transform: perspective(15px) rotateY(-0.15deg) rotateX(0.1deg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+
+.winBadges {
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    z-index: 0;
+}
+
+.winBadges::before {
+    content: "";
+    background-color: rgb(40, 167, 69); 
+    position: absolute;
+    right: -4cm;
+    width: 150%;
+    height: 8cm;
+    transform: rotateZ(25deg); 
+    z-index: -1;
+    box-shadow: 0px 0px 90px 100px rgba(40, 167, 69, 1);
+}
+
+.loseBadges {
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.loseBadges::before {
+    content: "";
+    background-color: rgb(167, 40, 40);
+    position: absolute;
+    right: -4cm;
+    width: 150%;
+    height: 8cm;
+    transform: rotateZ(25deg);
+    z-index: -2;
+    box-shadow: 0px 0px 90px 100px rgb(167, 40, 40);
+}
+
+#buttonGroup
+{
+    background: linear-gradient(to left top, 
+    rgba(255, 255, 255, 0.3),
+    rgba(28, 47, 57, 0.6));
+    transition: 0.5s ease;
+    backdrop-filter: blur(15px); 
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 12px;
+}
+
+#buttonGroup button
+{
+    background:rgba(255, 255, 255, 0.5);
+    transition: 0.5s ease;
+    overflow: hidden;
+    border: white;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+#buttonGroup button:hover
+{
+    background:rgba(255, 255, 255, 0.8);
+    transition: 0.5s ease;
+    border: white;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+#buttonGroup button::before
+{
+    content: '';
+    position: absolute;
+    background: linear-gradient(to left top, 
+    rgba(255, 255, 255, 1),
+    transparent);
+    top: 0;
+    left: -50px;
+    height: 100%;
+    width: 0%;
+    z-index: -1;
+    transition: 1s;
+    transform: skewX(-30deg);
+}
+
+#buttonGroup button:hover::before
+{
+    width: 120%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 1);
+}

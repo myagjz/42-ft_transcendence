@@ -1,0 +1,35 @@
+<main class="d-flex flex-fill justify-content-center align-items-center"> 
+  <div class="card shadow-lg p-4" style="width: 100%; max-width: 30rem;"> 
+    <div class="card-body"> 
+      <div class="text-center mb-4">
+        <i class="fa-solid fa-star-of-life fa-3x text-danger"></i> 
+        <h1 class="text-light h3 mt-2 fw-light">Giriş Yap</h1>
+      </div>
+      <form id="loginForm" spellcheck="false">
+        <div class="mb-3">
+          <label for="loginEmailInput" class="text-light form-label">Email Adresiniz</label>
+          <input id="loginEmailInput" 
+                 type="email" 
+                 class="form-control" 
+                 placeholder="Email Adresiniz" 
+                 autocomplete="username"
+                 required>
+          <div id="InvalidEmail" class="invalid-feedback">Lütfen geçerli bir email adresi girin.</div>
+        </div>
+        <div class="mb-3">
+          <label for="loginPassInput" class="text-light form-label">Şifreniz</label>
+          <input id="loginPassInput" 
+                 type="password" 
+                 class="form-control" 
+                 placeholder="Şifreniz" 
+                 autocomplete="current-password"
+                 required>
+          <div id="InvalidPass" class="invalid-feedback">Lütfen şifrenizi girin.</div>
+        </div>
+        <div class="d-grid">
+          <button type="submit" class="btn text-danger button">Onayla</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>

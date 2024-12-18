@@ -1,0 +1,64 @@
+services:
+  web:
+    container_name: web
+    build: ./core
+    env_file:
+      - .env
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./core:/code
+    depends_on:
+      - db
+      - redis
+    networks:
+      - webnet
+    hostname: web
+
+  db:
+    container_name: db
+    image: postgres:16
+    env_file:
+      - .env
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    networks:
+      - webnet
+    hostname: db
+
+  nginx:
+    container_name: nginx
+    build:
+      context: ./core/www
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    environment:
+      - SERVER_NAME=${SERVER_NAME}
+      - SSL_CN=${SSL_CN}
+    depends_on:
+      - web
+    ports:
+    - "443:443"
+    - "80:80"
+    volumes:
+      - ./core/www:/usr/share/nginx/html
+    networks:
+      - webnet
+    hostname: nginx
+  
+  redis:
+    container_name: redis
+    image: redis:7.4.1
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - webnet
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  webnet:

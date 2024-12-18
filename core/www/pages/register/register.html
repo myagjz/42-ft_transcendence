@@ -1,0 +1,35 @@
+<main class="d-flex flex-fill justify-content-center align-items-center">
+  <div class="card shadow-lg p-4" style="width: 100%; max-width: 30rem;"> 
+    <div class="card-body">
+      <div class="text-center">
+        <i class="fa-solid fa-star-of-life fa-4x text-danger mb-4"></i>
+        <h1 class="text-light fw-bold">Kayıt Ol</h1>
+      </div>
+      <form id="registerForm">
+        <div class="mb-3">
+          <label for="registerFirstNameInput" class="text-light form-label">Adınız</label>
+          <input id="registerFirstNameInput" type="text" class="form-control" placeholder="Adınız">
+          <div id="InvalidFirstName" class="invalid-feedback"></div>
+        </div>
+        <div class="mb-3">
+          <label for="registerLastNameInput" class="text-light form-label">Soyadınız</label>
+          <input id="registerLastNameInput" type="text" class="form-control" placeholder="Soyadınız">
+          <div id="InvalidLastName" class="invalid-feedback"></div>
+        </div>
+        <div class="mb-3">
+          <label for="registerEmailInput" class="text-light form-label">Email</label>
+          <input id="registerEmailInput" type="email" class="form-control" placeholder="Email">
+          <div id="InvalidEmail" class="invalid-feedback"></div>
+        </div>
+        <div class="mb-3">
+          <label for="registerPassInput" class="text-light form-label">Şifre</label>
+          <input id="registerPassInput" type="password" class="form-control" placeholder="Şifre">
+          <div id="InvalidPass" class="invalid-feedback"></div>
+        </div>
+        <div class="d-grid">
+          <button type="submit" class="btn text-danger rbutton">Onayla</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>

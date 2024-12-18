@@ -1,0 +1,20 @@
+<main class="d-flex flex-fill justify-content-center align-items-center">
+    <div class="card shadow-lg p-4" style="width: 30rem;">
+      <div class="card-body">
+        <h2 class="card-title text-light text-center mb-4">Profilini Düzenle</h2>
+        <form id="personalizeForm">
+          <div class="mb-3">
+            <label for="avatarFileInput" class="text-light form-label">Avatar Yükleyiniz</label>
+            <input id="avatarFileInput" class="form-control" type="file" accept="image/*">
+            <div id="InvalidAvatar" class="invalid-feedback"></div>
+          </div>
+          <div class="mb-3">
+            <label for="nicknameInput" class="text-light form-label">Kullanıcı Adı Seçiniz</label>
+            <input id="nicknameInput" type="text" class="form-control" placeholder="Kullanıcı Adı Giriniz.">
+            <div id="InvalidUsername" class="invalid-feedback"></div>
+          </div>
+          <button type="submit" class="btn btn-block text-danger w-100 button">İlerle</button>
+        </form>
+      </div>
+    </div>
+  </main>

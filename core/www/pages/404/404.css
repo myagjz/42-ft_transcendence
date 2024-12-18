@@ -1,0 +1,46 @@
+main {
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)),
+                        url('https://4kwallpapers.com/images/walls/thumbs_3t/9397.jpg');
+}
+
+.btn-warning
+{
+    background: linear-gradient(to left top, 
+    transparent,
+    rgba(255, 255, 255, 0.5));
+    overflow: hidden;
+    transition: 1s;
+    color: white;
+    border-radius: 5px;
+    backdrop-filter: blur(15px);
+}
+
+.btn-warning:hover
+{
+    box-shadow: 0 0 15px rgb(255, 208, 0);
+}
+
+.btn-warning::before
+{
+    content: '';
+    position: absolute;
+    background: linear-gradient(to left top, 
+    rgb(222, 170, 0),
+    rgb(255, 213, 0));
+    bottom: 0;
+    left: 0px;
+    height: 0%;
+    width: 100%;
+    z-index: -1;
+    transition: 1s;
+}
+
+.btn-warning:hover::before
+{
+    height: 100%;
+    box-shadow: 0 0 15px rgb(255, 208, 0);
+}

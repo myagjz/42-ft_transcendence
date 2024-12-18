@@ -1,0 +1,61 @@
+main {
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/2459.jpg');
+}
+
+
+.game
+{
+    background: linear-gradient(to left top, 
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.8));
+    overflow: hidden;
+    transition: 1s;
+    color: white;
+    backdrop-filter: blur(15px);
+    
+}
+
+.game::before
+{
+    content: '';
+    position: absolute;
+    background: linear-gradient(to left top, 
+    rgba(255, 255, 255, 1),
+    transparent);
+    top: 0;
+    left: -50px;
+    height: 100%;
+    width: 0%;
+    z-index: -1;
+    transition: 1s;
+    transform: skewX(-30deg);
+}
+
+.game:hover::before
+{
+    width: 120%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 1);
+}
+
+.game:hover
+{
+    color: rgb(0, 0, 0);
+    transform: perspective(5px) rotateY(0.001deg) rotateX(0.001deg);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 1);
+}
+
+.modal-content
+{
+    background: linear-gradient(to left top, 
+    rgba(255, 255, 255, 0.7),
+    transparent);
+    overflow: hidden;
+    transition: 1s;
+    color: white;
+    backdrop-filter: blur(15px);
+}
